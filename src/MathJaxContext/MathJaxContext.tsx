@@ -105,7 +105,7 @@ const MathJaxContext: FC<MathJaxContextProps> = ({
         const script = document.createElement("script")
         script.type = "text/javascript"
         script.src = usedSrc
-        script.async = false
+        script.defer = true
 
         script.addEventListener("load", () => {
             const mathJax = (window as any).MathJax
